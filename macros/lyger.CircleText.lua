@@ -39,6 +39,8 @@ local rec = DependencyControl{
 local LibLyger, util = rec:requireModules()
 local libLyger = LibLyger()
 
+local utf8pattern = "[%z\1-\127\194-\244][\128-\191]*"
+
 --[[
 Tags that can have any character after the tag declaration:
 \r
@@ -155,7 +157,7 @@ function circle_text(sub,sel)
 			val.style = util.deep_copy(current_style)
 
 			--Collect width data on each char
-			for thischar in val.text:gmatch(".") do
+			for thischar in val.text:gmatch(utf8pattern) do
 				cwidth=aegisub.text_extents(val.style,thischar)
 				table.insert(char_data[i],{char=thischar,width=cwidth})
 			end

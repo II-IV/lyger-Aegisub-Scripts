@@ -55,14 +55,14 @@
       "description": "Puts the text on a circular arc centered on the origin.",
       "channels": {
         "master": {
-          "version": "0.2.1",
-          "released": "2021-07-24",
+          "version": "0.2.0",
+          "released": "2015-05-14",
           "default": true,
           "files": [
             {
               "name": ".lua",
               "url": "@{fileBaseUrl}@{fileName}",
-              "sha1": "0EB4B9D5672F2FD22C9E42E4E25821A4A832635D"
+              "sha1": "A0F6ED38C9EFACAACA1EB1C164ED69A7E4CAE300"
             }
           ],
           "requiredModules": [
@@ -79,9 +79,6 @@
         }
       },
       "changelog": {
-        "0.2.1": [
-          "Deals with accented characters or special characters"
-        ],
         "0.2.0": [
           "Added DependencyControl"
         ]

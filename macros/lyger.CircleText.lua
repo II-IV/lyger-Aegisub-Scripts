@@ -24,7 +24,7 @@ Only works on static lines. If you want the line to move or rotate, use another 
 
 script_name = "Circular text"
 script_description = "Puts the text on a circular arc centered on the origin."
-script_version = "0.2.0"
+script_version = "0.2.1"
 script_author = "lyger"
 script_namespace = "lyger.CircleText"
 

@@ -178,7 +178,7 @@ flags
 
 script_name = "Lua Interpreter"
 script_description = "Run Lua code on the fly."
-script_version = "1.3.0"
+script_version = "1.3.1"
 script_author = "lyger"
 script_namespace = "lyger.LuaInterpret"
 
@@ -537,6 +537,10 @@ function lua_interpret(sub,sel)
 					d=func(c)
 					if tonumber(d) then
 						d = f2s(tonumber(d))
+					end
+					-- if modifying a vector clip, wrap tags in parentheses
+					if b == "clip" or b == "iclip" then
+						c, d = "("..c..")", "("..d..")"
 					end
 				end
 				--Prevent redundancy
